@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="br.com.fiap.entity.Item" catalog="artigo_hibernate">
+		<cache usage="read-write"/>
+		<id name="id" column="id_item" type="int">
+			<generator class="native" />
+		</id>
+		<property name="descricao" column="descricao" type="string" length="200"/>
+		<property name="quantidade" column="quantidade" type="int"/>
+	</class>
+</hibernate-mapping>

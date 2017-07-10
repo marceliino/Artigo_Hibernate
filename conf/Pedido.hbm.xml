@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="br.com.fiap.entity.Pedido" catalog="artigo_hibernate">
+		<id name="id" column="id_pedido" type="int">
+			<generator class="native" />
+		</id>
+		<property name="produto" column="nome" type="string" length="200"/>
+		<many-to-one name="cliente" class="br.com.fiap.entity.Cliente" column="id_cliente" cascade="all" outer-join="false" />
+	</class>
+</hibernate-mapping>
